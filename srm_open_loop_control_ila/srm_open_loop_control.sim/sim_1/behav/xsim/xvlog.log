@@ -1,0 +1,22 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/SRM_FPGA/srm_open_loop_control/srm_open_loop_control.srcs/sources_1/new/anode_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module anode_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/SRM_FPGA/srm_open_loop_control/srm_open_loop_control.srcs/sources_1/new/bcd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bcd
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/SRM_FPGA/srm_open_loop_control/srm_open_loop_control.srcs/sources_1/new/bcd_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bcd_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/SRM_FPGA/srm_open_loop_control/srm_open_loop_control.srcs/sources_1/new/bcd_to_cathodes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bcd_to_cathodes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/SRM_FPGA/srm_open_loop_control/srm_open_loop_control.srcs/sources_1/new/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/SRM_FPGA/srm_open_loop_control/srm_open_loop_control.srcs/sources_1/new/current_measurement.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module current_measurement
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/SRM_FPGA/srm_open_loop_control/srm_open_loop_control.srcs/sources_1/new/refresh_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module refresh_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/SRM_FPGA/srm_open_loop_control/srm_open_loop_control.srcs/sources_1/new/seven_segment_display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seven_segment_display
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/SRM_FPGA/srm_open_loop_control/srm_open_loop_control.srcs/sources_1/new/speed_measurement.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module speed_measurement
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/SRM_FPGA/srm_open_loop_control/srm_open_loop_control.srcs/sources_1/new/spi_dac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_dac
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/FPGA/SRM_FPGA/srm_open_loop_control/srm_open_loop_control.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top

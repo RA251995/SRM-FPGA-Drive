@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Jul 16 21:57:42 2019
+# Process ID: 18404
+# Current directory: E:/FPGA/SRM_FPGA/srm_open_loop_control_ila
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16288 E:\FPGA\SRM_FPGA\srm_open_loop_control_ila\srm_open_loop_control.xpr
+# Log file: E:/FPGA/SRM_FPGA/srm_open_loop_control_ila/vivado.log
+# Journal file: E:/FPGA/SRM_FPGA/srm_open_loop_control_ila\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/FPGA/SRM_FPGA/srm_open_loop_control_ila/srm_open_loop_control.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+reset_run impl_1

@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../current_measuremrnt.srcs/sources_1/new/anode_control.v" \
+"../../../../current_measuremrnt.srcs/sources_1/new/bcd.v" \
+"../../../../current_measuremrnt.srcs/sources_1/new/bcd_control.v" \
+"../../../../current_measuremrnt.srcs/sources_1/new/bcd_to_cathodes.v" \
+"../../../../current_measuremrnt.srcs/sources_1/new/clock_divider.v" \
+"../../../../current_measuremrnt.srcs/sources_1/new/refresh_counter.v" \
+"../../../../current_measuremrnt.srcs/sources_1/new/seven_segment_display.v" \
+"../../../../current_measuremrnt.srcs/sources_1/new/top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

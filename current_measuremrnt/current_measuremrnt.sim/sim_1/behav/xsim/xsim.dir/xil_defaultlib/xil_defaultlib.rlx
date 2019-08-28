@@ -1,0 +1,13 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/anode_control.v,1562642428,verilog,,E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/bcd.v,,anode_control,,,,,,,,
+E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/bcd.v,1562673374,verilog,,E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/bcd_control.v,,bcd,,,,,,,,
+E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/bcd_control.v,1562669343,verilog,,E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/bcd_to_cathodes.v,,bcd_control,,,,,,,,
+E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/bcd_to_cathodes.v,1562761566,verilog,,E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/clock_divider.v,,bcd_to_cathodes,,,,,,,,
+E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/clock_divider.v,1562641244,verilog,,E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/refresh_counter.v,,clock_divider,,,,,,,,
+E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/refresh_counter.v,1562642434,verilog,,E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/seven_segment_display.v,,refresh_counter,,,,,,,,
+E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/seven_segment_display.v,1562760814,verilog,,E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/top.v,,seven_segment_display,,,,,,,,
+E:/FPGA/SRM_FPGA/current_measuremrnt/current_measuremrnt.srcs/sources_1/new/top.v,1562769647,verilog,,,,top,,,,,,,,

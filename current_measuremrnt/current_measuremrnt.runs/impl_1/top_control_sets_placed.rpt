@@ -1,0 +1,101 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Jul 10 20:19:12 2019
+| Host         : HP running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    23 |
+|    Minimum number of control sets                        |    23 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   135 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    23 |
+| >= 0 to < 4        |    18 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               9 |            5 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              37 |           10 |
+| Yes          | No                    | No                     |              33 |           12 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              18 |           16 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------------------------------+-----------------------------+-----------------------------------------------------------------------+------------------+----------------+
+|                            Clock Signal                            |        Enable Signal        |                            Set/Reset Signal                           | Slice Load Count | Bel Load Count |
++--------------------------------------------------------------------+-----------------------------+-----------------------------------------------------------------------+------------------+----------------+
+| ~CLK_OBUF_BUFG                                                     | FSM_onehot_state[3]_i_2_n_0 | data0                                                                 |                1 |              1 |
+| ~CLK_OBUF_BUFG                                                     | CS_i_1_n_0                  |                                                                       |                1 |              1 |
+| ~CLK_OBUF_BUFG                                                     | data[13]                    | data0                                                                 |                1 |              1 |
+| ~CLK_OBUF_BUFG                                                     | data[7]                     | data0                                                                 |                1 |              1 |
+| ~CLK_OBUF_BUFG                                                     | data[6]                     | data0                                                                 |                1 |              1 |
+| ~CLK_OBUF_BUFG                                                     | data[8]                     | data0                                                                 |                1 |              1 |
+| ~CLK_OBUF_BUFG                                                     | data[1]                     | data0                                                                 |                1 |              1 |
+| ~CLK_OBUF_BUFG                                                     | data[11]                    | data0                                                                 |                1 |              1 |
+| ~CLK_OBUF_BUFG                                                     | data[5]                     | data0                                                                 |                1 |              1 |
+| ~CLK_OBUF_BUFG                                                     | data[9]                     | data0                                                                 |                1 |              1 |
+| ~CLK_OBUF_BUFG                                                     | data[12]                    | data0                                                                 |                1 |              1 |
+| ~CLK_OBUF_BUFG                                                     | data[10]                    | data0                                                                 |                1 |              1 |
+| ~CLK_OBUF_BUFG                                                     | data[3]                     | data0                                                                 |                1 |              1 |
+| ~CLK_OBUF_BUFG                                                     | data[4]                     | data0                                                                 |                1 |              1 |
+| ~CLK_OBUF_BUFG                                                     | data[2]                     | data0                                                                 |                1 |              1 |
+|  seven_segment_display_wrapper/refresh_clock_generator_wrapper/CLK |                             |                                                                       |                1 |              3 |
+|  MCLK_IBUF_BUFG                                                    |                             |                                                                       |                3 |              3 |
+| ~CLK_OBUF_BUFG                                                     |                             |                                                                       |                1 |              3 |
+| ~CLK_OBUF_BUFG                                                     | FSM_onehot_state[3]_i_1_n_0 |                                                                       |                1 |              4 |
+| ~CLK_OBUF_BUFG                                                     | index                       | data0                                                                 |                2 |              4 |
+|  MCLK_IBUF_BUFG                                                    |                             | clkdiv[5]_i_1_n_0                                                     |                2 |              6 |
+| ~CLK_OBUF_BUFG                                                     | wait_count0                 |                                                                       |               10 |             28 |
+|  MCLK_IBUF_BUFG                                                    |                             | seven_segment_display_wrapper/refresh_clock_generator_wrapper/div_clk |                8 |             31 |
++--------------------------------------------------------------------+-----------------------------+-----------------------------------------------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,24 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto fcf20e2d1c5c4e80bff61acedd4cd803 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_behav xil_defaultlib.top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 14 for port 'number' [E:/FPGA/SRM_FPGA/srm_open_loop_control/srm_open_loop_control.srcs/sources_1/new/top.v:58]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.current_measurement
+Compiling module xil_defaultlib.spi_dac
+Compiling module xil_defaultlib.speed_measurement
+Compiling module xil_defaultlib.bcd
+Compiling module xil_defaultlib.clock_divider
+Compiling module xil_defaultlib.refresh_counter
+Compiling module xil_defaultlib.anode_control
+Compiling module xil_defaultlib.bcd_control
+Compiling module xil_defaultlib.bcd_to_cathodes
+Compiling module xil_defaultlib.seven_segment_display
+Compiling module xil_defaultlib.clock_divider(CLK_DIV=49999)
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_behav
