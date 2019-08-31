@@ -32,6 +32,7 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo e:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
+  E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/UART_tx.v
   E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/anode_control.v
   E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/bcd.v
   E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/bcd_control.v

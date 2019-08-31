@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Wed Aug 28 14:26:23 2019
+| Date             : Sat Aug 31 23:43:58 2019
 | Host             : HP running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 38.641 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 38.736 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 37.845                           |
+| Dynamic (W)              | 37.939                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     1.860 |      725 |       --- |             --- |
-|   LUT as Logic |     1.681 |      265 |     63400 |            0.42 |
-|   Register     |     0.092 |      345 |    126800 |            0.27 |
-|   CARRY4       |     0.067 |       30 |     15850 |            0.19 |
-|   F7/F8 Muxes  |     0.012 |        8 |     63400 |            0.01 |
+| Slice Logic    |     1.902 |      827 |       --- |             --- |
+|   LUT as Logic |     1.709 |      284 |     63400 |            0.45 |
+|   Register     |     0.099 |      406 |    126800 |            0.32 |
+|   CARRY4       |     0.081 |       37 |     15850 |            0.23 |
 |   BUFG         |     0.009 |        5 |        32 |           15.63 |
-|   Others       |     0.000 |       19 |       --- |             --- |
-| Signals        |     1.913 |      589 |       --- |             --- |
-| I/O            |    34.072 |       48 |       210 |           22.86 |
+|   F7/F8 Muxes  |     0.004 |        5 |     63400 |           <0.01 |
+|   Others       |     0.000 |       22 |       --- |             --- |
+| Signals        |     2.071 |      684 |       --- |             --- |
+| I/O            |    33.966 |       49 |       210 |           23.33 |
 | Static Power   |     0.797 |          |           |                 |
-| Total          |    38.641 |          |           |                 |
+| Total          |    38.736 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     4.375 |       3.813 |      0.563 |
-| Vccaux    |       1.800 |     1.340 |       1.247 |      0.093 |
-| Vcco33    |       3.300 |     9.636 |       9.632 |      0.004 |
+| Vccint    |       1.000 |     4.576 |       4.013 |      0.563 |
+| Vccaux    |       1.800 |     1.336 |       1.243 |      0.093 |
+| Vcco33    |       3.300 |     9.606 |       9.602 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -139,16 +139,17 @@ Table of Contents
 +-------------------------------------+-----------+
 | Name                                | Power (W) |
 +-------------------------------------+-----------+
-| top                                 |    37.845 |
-|   current_measurement_wrapper1      |     0.893 |
+| top                                 |    37.939 |
+|   UART_tx_wrapper                   |     0.092 |
+|   current_measurement_wrapper1      |     1.152 |
 |   current_measurement_wrapper2      |     0.235 |
-|   current_measurement_wrapper3      |     0.216 |
-|   current_measurement_wrapper4      |     0.199 |
-|   seven_segment_display_wrapper     |     1.258 |
-|     refresh_clock_generator_wrapper |     0.153 |
-|     refresh_counter_wrapper         |     1.105 |
-|   speed_measurement_instance        |     0.215 |
-|   spi_dac_current                   |     0.404 |
+|   current_measurement_wrapper3      |     0.215 |
+|   current_measurement_wrapper4      |     0.222 |
+|   seven_segment_display_wrapper     |     1.063 |
+|     refresh_clock_generator_wrapper |     0.155 |
+|     refresh_counter_wrapper         |     0.908 |
+|   speed_measurement_instance        |     0.235 |
+|   spi_dac_current                   |     0.401 |
 |   update_clock_generator_wrapper    |     0.181 |
 +-------------------------------------+-----------+
 

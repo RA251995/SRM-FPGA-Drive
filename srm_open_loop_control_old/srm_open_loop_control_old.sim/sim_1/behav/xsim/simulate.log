@@ -1,0 +1,21 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 68
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 69
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 60
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 61
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 68
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 69
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 60
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 61
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 68
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 69
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 60
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 61
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 68
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 69
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v" Line 60
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/spi_dac.v" Line 70
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/spi_dac.v" Line 85
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/spi_dac.v" Line 86
+Stopped at time : 53045 us : File "E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/spi_dac.v" Line 87

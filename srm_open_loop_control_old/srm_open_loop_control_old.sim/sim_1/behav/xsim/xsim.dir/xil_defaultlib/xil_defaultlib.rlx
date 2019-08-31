@@ -1,0 +1,16 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/anode_control.v,1563408890,verilog,,E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/bcd.v,,anode_control,,,,,,,,
+E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/bcd.v,1563408890,verilog,,E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/bcd_control.v,,bcd,,,,,,,,
+E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/bcd_control.v,1563408890,verilog,,E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/bcd_to_cathodes.v,,bcd_control,,,,,,,,
+E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/bcd_to_cathodes.v,1563408890,verilog,,E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/clock_divider.v,,bcd_to_cathodes,,,,,,,,
+E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/clock_divider.v,1563408890,verilog,,E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v,,clock_divider,,,,,,,,
+E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v,1567230714,verilog,,E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/refresh_counter.v,,current_measurement,,,,,,,,
+E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/refresh_counter.v,1563408890,verilog,,E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/seven_segment_display.v,,refresh_counter,,,,,,,,
+E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/seven_segment_display.v,1563408890,verilog,,E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/speed_measurement.v,,seven_segment_display,,,,,,,,
+E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/speed_measurement.v,1563408890,verilog,,E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/spi_dac.v,,speed_measurement,,,,,,,,
+E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/spi_dac.v,1566982227,verilog,,E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/top.v,,spi_dac,,,,,,,,
+E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/top.v,1566982312,verilog,,,,top,,,,,,,,

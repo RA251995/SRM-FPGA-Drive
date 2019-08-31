@@ -1,0 +1,2 @@
+Breakpoint File Version 1.0
+68 true E:/FPGA/SRM_FPGA/srm_open_loop_control_old/srm_open_loop_control_old.srcs/sources_1/new/current_measurement.v

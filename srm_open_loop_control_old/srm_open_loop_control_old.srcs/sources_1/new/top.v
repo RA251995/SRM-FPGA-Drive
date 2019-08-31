@@ -30,6 +30,8 @@ module top(
     output wire DAC_SYNC_,
     output wire DAC_DIN,
     
+    output wire UART_RXD_OUT,
+    
     output reg brown_top,
     output reg yellow_top,
     output reg black_top,
@@ -75,6 +77,28 @@ module top(
     
     bcd bcd_wrapper (.number(number), .thousands(digit4), .hundreds(digit3), .tens(digit2), .ones(digit1));
     seven_segment_display seven_segment_display_wrapper (.clk(clk), .digit1(digit1), .digit2(digit2), .digit3(digit3), .digit4(digit4), .digit5(digit5), .digit6(digit6), .digit7(digit7), .digit8(digit8), .cathode(cathode), .anode(anode));
+    
+    reg UART_send =1'b0;
+    reg [7:0] UART_data_lsb = 8'b0;
+    reg [7:0] UART_data = 8'b0;
+    wire UART_ready;
+    reg msb = 1'b1;
+    UART_tx #(115200, 10) UART_tx_wrapper(.clk(clk), .send(UART_send), .data(UART_data), .ready(UART_ready), .tx(UART_RXD_OUT));
+    always @ (negedge clk) begin
+        UART_send = 1'b0;
+        if (UART_ready == 1'b1) begin
+            if (msb == 1'b1) begin
+                UART_data_lsb = current1[7:0];
+                UART_data = {4'b0, current1[11:8]};
+                msb = 1'b0;
+            end
+            else begin
+                UART_data = UART_data_lsb;
+                msb = 1'b1;
+            end
+            UART_send = 1'b1;
+        end
+    end
     
     assign LED[3] = hallR;
     assign LED[2] = hallB;
