@@ -65,10 +65,11 @@ module top(
     wire [11:0] current2;
     wire [11:0] current3;
     wire [11:0] current4;
-    current_measurement current_measurement_wrapper1(.MCLK(clk), .MISO(I_MISO_1), .CLK(I_CLK_1), .CS(I_CS_1), .current(current1));
-    current_measurement current_measurement_wrapper2(.MCLK(clk), .MISO(I_MISO_2), .CLK(I_CLK_2), .CS(I_CS_2), .current(current2));
-    current_measurement current_measurement_wrapper3(.MCLK(clk), .MISO(I_MISO_3), .CLK(I_CLK_3), .CS(I_CS_3), .current(current3));
-    current_measurement current_measurement_wrapper4(.MCLK(clk), .MISO(I_MISO_4), .CLK(I_CLK_4), .CS(I_CS_4), .current(current4));
+    current_measurement #(2048) current_measurement_wrapper1(.MCLK(clk), .MISO(I_MISO_1), .CLK(I_CLK_1), .CS(I_CS_1), .current(current1));
+    current_measurement #(2048) current_measurement_wrapper2(.MCLK(clk), .MISO(I_MISO_2), .CLK(I_CLK_2), .CS(I_CS_2), .current(current2));
+    current_measurement #(2048) current_measurement_wrapper3(.MCLK(clk), .MISO(I_MISO_3), .CLK(I_CLK_3), .CS(I_CS_3), .current(current3));
+    current_measurement #(2048) current_measurement_wrapper4(.MCLK(clk), .MISO(I_MISO_4), .CLK(I_CLK_4), .CS(I_CS_4), .current(current4));
+    
     spi_dac spi_dac_current(.CLK(clk), .DATA_A(current1), .DATA_B(current2), .DATA_C(current3), .DATA_D(current4), .SCLK(DAC_SCLK), .SYNC_(DAC_SYNC_), .DIN(DAC_DIN));
     wire [11:0] freq;
     speed_measurement speed_measurement_instance (.clk(clk), .hallR(hallR), .freq(freq));

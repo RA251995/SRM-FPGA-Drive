@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Tue Jul  9 18:27:34 2019
+| Date             : Wed Sep 25 20:53:58 2019
 | Host             : HP running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 6.046        |
+| Total On-Chip Power (W)  | 9.053        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 5.914        |
-| Device Static (W)        | 0.132        |
+| Dynamic (W)              | 8.881        |
+| Device Static (W)        | 0.173        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 57.4         |
-| Junction Temperature (C) | 52.6         |
+| Max Ambient (C)          | 43.7         |
+| Junction Temperature (C) | 66.3         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,10 +52,10 @@ Table of Contents
 +--------------+-----------+----------+-----------+-----------------+
 | On-Chip      | Power (W) | Used     | Available | Utilization (%) |
 +--------------+-----------+----------+-----------+-----------------+
-| Signals      |     0.052 |        8 |       --- |             --- |
-| I/O          |     5.862 |       16 |       210 |            7.62 |
-| Static Power |     0.132 |          |           |                 |
-| Total        |     6.046 |          |           |                 |
+| Signals      |     0.088 |       12 |       --- |             --- |
+| I/O          |     8.792 |       24 |       210 |           11.43 |
+| Static Power |     0.173 |          |           |                 |
+| Total        |     9.053 |          |           |                 |
 +--------------+-----------+----------+-----------+-----------------+
 
 
@@ -65,16 +65,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.128 |       0.084 |      0.044 |
-| Vccaux    |       1.800 |     0.235 |       0.214 |      0.021 |
-| Vcco33    |       3.300 |     1.654 |       1.650 |      0.004 |
+| Vccint    |       1.000 |     0.212 |       0.136 |      0.076 |
+| Vccaux    |       1.800 |     0.346 |       0.320 |      0.026 |
+| Vcco33    |       3.300 |     2.479 |       2.475 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| Vccbram   |       1.000 |     0.002 |       0.000 |      0.002 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -132,7 +132,7 @@ Table of Contents
 +------+-----------+
 | Name | Power (W) |
 +------+-----------+
-| top  |     5.914 |
+| top  |     8.881 |
 +------+-----------+
 
 

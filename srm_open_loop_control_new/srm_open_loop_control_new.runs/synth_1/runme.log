@@ -1,0 +1,546 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5688 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 736.613 ; gain = 178.211
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'current_measurement' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/current_measurement.v:3]
+	Parameter ZERO_SHIFT bound to: 2048 - type: integer 
+	Parameter data_len bound to: 16 - type: integer 
+	Parameter RDY bound to: 2'b00 
+	Parameter RECEIVE bound to: 2'b01 
+	Parameter STOP bound to: 2'b10 
+	Parameter WAIT bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'current_measurement' (1#1) [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/current_measurement.v:3]
+INFO: [Synth 8-6157] synthesizing module 'spi_dac' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/spi_dac.v:3]
+	Parameter RDY bound to: 2'b00 
+	Parameter START bound to: 2'b01 
+	Parameter STOP bound to: 2'b10 
+	Parameter WAIT bound to: 2'b11 
+	Parameter addressA bound to: 4'b0000 
+	Parameter addressB bound to: 4'b0001 
+	Parameter addressC bound to: 4'b0010 
+	Parameter addressD bound to: 4'b0011 
+WARNING: [Synth 8-6014] Unused sequential element command_reg was removed.  [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/spi_dac.v:43]
+WARNING: [Synth 8-6014] Unused sequential element data_reg was removed.  [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/spi_dac.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'spi_dac' (2#1) [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/spi_dac.v:3]
+INFO: [Synth 8-6157] synthesizing module 'speed_measurement' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/speed_measurement.v:3]
+	Parameter CLK_DIV bound to: 99999999 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'speed_measurement' (3#1) [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/speed_measurement.v:3]
+INFO: [Synth 8-6157] synthesizing module 'bcd' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'bcd' (4#1) [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd.v:3]
+INFO: [Synth 8-6157] synthesizing module 'seven_segment_display' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/seven_segment_display.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/clock_divider.v:6]
+	Parameter CLK_DIV bound to: 4999 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (5#1) [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/clock_divider.v:6]
+INFO: [Synth 8-6157] synthesizing module 'refresh_counter' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/refresh_counter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'refresh_counter' (6#1) [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/refresh_counter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'anode_control' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/anode_control.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'anode_control' (7#1) [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/anode_control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'bcd_control' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd_control.v:3]
+WARNING: [Synth 8-567] referenced signal 'digit1' should be on the sensitivity list [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd_control.v:18]
+WARNING: [Synth 8-567] referenced signal 'digit2' should be on the sensitivity list [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd_control.v:18]
+WARNING: [Synth 8-567] referenced signal 'digit3' should be on the sensitivity list [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd_control.v:18]
+WARNING: [Synth 8-567] referenced signal 'digit4' should be on the sensitivity list [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd_control.v:18]
+WARNING: [Synth 8-567] referenced signal 'digit5' should be on the sensitivity list [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd_control.v:18]
+WARNING: [Synth 8-567] referenced signal 'digit6' should be on the sensitivity list [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd_control.v:18]
+WARNING: [Synth 8-567] referenced signal 'digit7' should be on the sensitivity list [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd_control.v:18]
+WARNING: [Synth 8-567] referenced signal 'digit8' should be on the sensitivity list [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd_control.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'bcd_control' (8#1) [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd_control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'bcd_to_cathodes' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd_to_cathodes.v:3]
+INFO: [Synth 8-226] default block is never used [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd_to_cathodes.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'bcd_to_cathodes' (9#1) [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/bcd_to_cathodes.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'seven_segment_display' (10#1) [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/seven_segment_display.v:3]
+INFO: [Synth 8-6157] synthesizing module 'UART_tx' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/UART_tx.v:2]
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter BIT_INDEX_MAX bound to: 10 - type: integer 
+	Parameter baud_timer bound to: 27'b000000000000000001101100100 
+	Parameter READY bound to: 2'b00 
+	Parameter LOAD_BIT bound to: 2'b01 
+	Parameter SEND_BIT bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'UART_tx' (11#1) [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/UART_tx.v:2]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider__parameterized0' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/clock_divider.v:6]
+	Parameter CLK_DIV bound to: 49999 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider__parameterized0' (11#1) [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/clock_divider.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/top.v:113]
+INFO: [Synth 8-6155] done synthesizing module 'top' (12#1) [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/top.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 800.176 ; gain = 241.773
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 800.176 ; gain = 241.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 800.176 ; gain = 241.773
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 922.359 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 922.359 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 922.359 ; gain = 363.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 922.359 ; gain = 363.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 922.359 ; gain = 363.957
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'current_measurement'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi_dac'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'UART_tx'
+INFO: [Synth 8-4471] merging register 'brown_bottom_reg' into 'brown_top_reg' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/top.v:116]
+INFO: [Synth 8-4471] merging register 'yellow_bottom_reg' into 'yellow_top_reg' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/top.v:118]
+INFO: [Synth 8-4471] merging register 'black_bottom_reg' into 'black_top_reg' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/top.v:120]
+INFO: [Synth 8-4471] merging register 'gray_bottom_reg' into 'gray_top_reg' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/top.v:122]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    WAIT |                             0001 |                               11
+                     RDY |                             0010 |                               00
+                 RECEIVE |                             0100 |                               01
+                    STOP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'current_measurement'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    WAIT |                               00 |                               11
+                     RDY |                               01 |                               00
+                   START |                               10 |                               01
+                    STOP |                               11 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'spi_dac'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   READY |                              001 |                               00
+                LOAD_BIT |                              010 |                               01
+                SEND_BIT |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'UART_tx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 922.359 ; gain = 363.957
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     27 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 5     
+	   2 Input      6 Bit       Adders := 7     
+	   2 Input      4 Bit       Adders := 39    
+	   2 Input      3 Bit       Adders := 6     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               27 Bit    Registers := 1     
+	               16 Bit    Registers := 4     
+	               12 Bit    Registers := 9     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 6     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 22    
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     27 Bit        Muxes := 1     
+	   3 Input     27 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 4     
+	   2 Input     12 Bit        Muxes := 9     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 5     
+	   4 Input      4 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 39    
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 11    
+	   4 Input      1 Bit        Muxes := 13    
+	   3 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 5     
+Module current_measurement 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+Module spi_dac 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 5     
+Module speed_measurement 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module bcd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 34    
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 26    
+Module clock_divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module refresh_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module anode_control 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+Module UART_tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               27 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     27 Bit        Muxes := 1     
+	   3 Input     27 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 3     
+Module clock_divider__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'current_measurement_wrapper1/current_prev_reg[11:0]' into 'current_measurement_wrapper1/current_reg[11:0]' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/current_measurement.v:51]
+INFO: [Synth 8-4471] merging register 'current_measurement_wrapper2/current_reg[11:0]' into 'current_measurement_wrapper2/current_prev_reg[11:0]' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/current_measurement.v:51]
+INFO: [Synth 8-4471] merging register 'current_measurement_wrapper3/current_reg[11:0]' into 'current_measurement_wrapper3/current_prev_reg[11:0]' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/current_measurement.v:51]
+INFO: [Synth 8-4471] merging register 'current_measurement_wrapper4/current_reg[11:0]' into 'current_measurement_wrapper4/current_prev_reg[11:0]' [E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/new/current_measurement.v:51]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\UART_tx_wrapper/txData_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\UART_tx_wrapper/txData_reg[0] )
+INFO: [Synth 8-3886] merging instance 'spi_dac_current/spi_buffer_reg[31]' (FD) to 'spi_dac_current/spi_buffer_reg[1]'
+INFO: [Synth 8-3886] merging instance 'spi_dac_current/spi_buffer_reg[30]' (FD) to 'spi_dac_current/spi_buffer_reg[1]'
+INFO: [Synth 8-3886] merging instance 'spi_dac_current/spi_buffer_reg[29]' (FD) to 'spi_dac_current/spi_buffer_reg[1]'
+INFO: [Synth 8-3886] merging instance 'spi_dac_current/spi_buffer_reg[28]' (FD) to 'spi_dac_current/spi_buffer_reg[1]'
+INFO: [Synth 8-3886] merging instance 'spi_dac_current/spi_buffer_reg[27]' (FDS) to 'spi_dac_current/spi_buffer_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi_dac_current/spi_buffer_reg[26] )
+INFO: [Synth 8-3886] merging instance 'spi_dac_current/spi_buffer_reg[25]' (FDR) to 'spi_dac_current/spi_buffer_reg[24]'
+INFO: [Synth 8-3886] merging instance 'spi_dac_current/spi_buffer_reg[23]' (FD) to 'spi_dac_current/spi_buffer_reg[1]'
+INFO: [Synth 8-3886] merging instance 'spi_dac_current/spi_buffer_reg[22]' (FD) to 'spi_dac_current/spi_buffer_reg[1]'
+INFO: [Synth 8-3886] merging instance 'spi_dac_current/spi_buffer_reg[7]' (FD) to 'spi_dac_current/spi_buffer_reg[1]'
+INFO: [Synth 8-3886] merging instance 'spi_dac_current/spi_buffer_reg[6]' (FD) to 'spi_dac_current/spi_buffer_reg[1]'
+INFO: [Synth 8-3886] merging instance 'spi_dac_current/spi_buffer_reg[5]' (FD) to 'spi_dac_current/spi_buffer_reg[1]'
+INFO: [Synth 8-3886] merging instance 'spi_dac_current/spi_buffer_reg[4]' (FD) to 'spi_dac_current/spi_buffer_reg[1]'
+INFO: [Synth 8-3886] merging instance 'spi_dac_current/spi_buffer_reg[3]' (FD) to 'spi_dac_current/spi_buffer_reg[1]'
+INFO: [Synth 8-3886] merging instance 'spi_dac_current/spi_buffer_reg[2]' (FD) to 'spi_dac_current/spi_buffer_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\spi_dac_current/spi_buffer_reg[1] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 981.090 ; gain = 422.688
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 981.090 ; gain = 422.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 981.090 ; gain = 422.688
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 981.090 ; gain = 422.688
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 981.090 ; gain = 422.688
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 981.090 ; gain = 422.688
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 981.090 ; gain = 422.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 981.090 ; gain = 422.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 981.090 ; gain = 422.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 981.090 ; gain = 422.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     5|
+|2     |CARRY4 |    37|
+|3     |LUT1   |    18|
+|4     |LUT2   |    40|
+|5     |LUT3   |    94|
+|6     |LUT4   |    45|
+|7     |LUT5   |    98|
+|8     |LUT6   |   103|
+|9     |MUXF7  |     4|
+|10    |FDRE   |   375|
+|11    |FDSE   |    22|
+|12    |IBUF   |    10|
+|13    |OBUF   |    39|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------------------+------------------------------+------+
+|      |Instance                            |Module                        |Cells |
++------+------------------------------------+------------------------------+------+
+|1     |top                                 |                              |   890|
+|2     |  UART_tx_wrapper                   |UART_tx                       |    74|
+|3     |  current_measurement_wrapper1      |current_measurement           |   153|
+|4     |  current_measurement_wrapper2      |current_measurement_0         |    89|
+|5     |  current_measurement_wrapper3      |current_measurement_1         |    89|
+|6     |  current_measurement_wrapper4      |current_measurement_2         |    89|
+|7     |  seven_segment_display_wrapper     |seven_segment_display         |    83|
+|8     |    refresh_clock_generator_wrapper |clock_divider                 |    52|
+|9     |    refresh_counter_wrapper         |refresh_counter               |    31|
+|10    |  speed_measurement_instance        |speed_measurement             |    85|
+|11    |  spi_dac_current                   |spi_dac                       |    93|
+|12    |  update_clock_generator_wrapper    |clock_divider__parameterized0 |    52|
++------+------------------------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 981.090 ; gain = 422.688
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 981.090 ; gain = 300.504
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 981.090 ; gain = 422.688
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 981.090 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+72 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 981.090 ; gain = 687.109
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 981.090 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 25 21:26:36 2019...
