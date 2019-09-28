@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Wed Sep 25 21:28:23 2019
+| Date             : Sat Sep 28 18:13:21 2019
 | Host             : HP running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 37.235 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 40.992 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 36.438                           |
+| Dynamic (W)              | 40.196                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,17 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     1.887 |      867 |       --- |             --- |
-|   LUT as Logic |     1.695 |      314 |     63400 |            0.50 |
-|   Register     |     0.099 |      401 |    126800 |            0.32 |
-|   CARRY4       |     0.081 |       37 |     15850 |            0.23 |
+| Slice Logic    |     4.040 |     1072 |       --- |             --- |
+|   LUT as Logic |     3.680 |      411 |     63400 |            0.65 |
+|   CARRY4       |     0.243 |       64 |     15850 |            0.40 |
+|   Register     |     0.104 |      412 |    126800 |            0.32 |
 |   BUFG         |     0.009 |        5 |        32 |           15.63 |
 |   F7/F8 Muxes  |     0.003 |        4 |     63400 |           <0.01 |
-|   Others       |     0.000 |       22 |       --- |             --- |
-| Signals        |     1.941 |      684 |       --- |             --- |
-| I/O            |    32.610 |       49 |       210 |           23.33 |
+|   Others       |     0.000 |       25 |       --- |             --- |
+| Signals        |     3.127 |      844 |       --- |             --- |
+| DSPs           |     0.785 |        1 |       240 |            0.42 |
+| I/O            |    32.122 |       53 |       210 |           25.24 |
+| XADC           |     0.121 |        1 |       --- |             --- |
 | Static Power   |     0.797 |          |           |                 |
-| Total          |    37.235 |          |           |                 |
+| Total          |    40.992 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     4.431 |       3.868 |      0.563 |
-| Vccaux    |       1.800 |     1.286 |       1.194 |      0.093 |
-| Vcco33    |       3.300 |     9.223 |       9.219 |      0.004 |
+| Vccint    |       1.000 |     8.602 |       8.040 |      0.563 |
+| Vccaux    |       1.800 |     1.268 |       1.175 |      0.093 |
+| Vcco33    |       3.300 |     9.080 |       9.076 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -84,7 +86,7 @@ Table of Contents
 | Vccbram   |       1.000 |     0.018 |       0.000 |      0.018 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
-| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
+| Vccadc    |       1.800 |     0.070 |       0.050 |      0.020 |
 +-----------+-------------+-----------+-------------+------------+
 
 
@@ -139,18 +141,19 @@ Table of Contents
 +-------------------------------------+-----------+
 | Name                                | Power (W) |
 +-------------------------------------+-----------+
-| top                                 |    36.438 |
-|   UART_tx_wrapper                   |     0.094 |
-|   current_measurement_wrapper1      |     0.837 |
-|   current_measurement_wrapper2      |     0.221 |
-|   current_measurement_wrapper3      |     0.224 |
-|   current_measurement_wrapper4      |     0.219 |
-|   seven_segment_display_wrapper     |     1.232 |
-|     refresh_clock_generator_wrapper |     0.168 |
-|     refresh_counter_wrapper         |     1.064 |
-|   speed_measurement_instance        |     0.246 |
-|   spi_dac_current                   |     0.404 |
-|   update_clock_generator_wrapper    |     0.181 |
+| top                                 |    40.196 |
+|   UART_tx_wrapper                   |     0.093 |
+|   current_measurement_wrapper1      |     0.533 |
+|   current_measurement_wrapper2      |     0.214 |
+|   current_measurement_wrapper3      |     0.222 |
+|   current_measurement_wrapper4      |     0.224 |
+|   seven_segment_display_wrapper     |     1.314 |
+|     refresh_clock_generator_wrapper |     0.165 |
+|     refresh_counter_wrapper         |     1.148 |
+|   speed_measurement_instance        |     0.689 |
+|   spi_dac_current                   |     0.413 |
+|   update_clock_generator_wrapper    |     0.164 |
+|   xadc_pot                          |     0.153 |
 +-------------------------------------+-----------+
 
 

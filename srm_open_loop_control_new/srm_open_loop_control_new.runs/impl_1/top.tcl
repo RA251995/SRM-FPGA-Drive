@@ -75,6 +75,7 @@ set rc [catch {
   set_property ip_output_repo E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.runs/synth_1/top.dcp
+  read_ip -quiet e:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci
   read_xdc E:/FPGA/SRM_FPGA/srm_open_loop_control_new/Nexys-4-DDR-Master.xdc
   link_design -top top -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb

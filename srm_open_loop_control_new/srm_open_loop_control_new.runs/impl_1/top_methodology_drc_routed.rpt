@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Sep 25 21:28:22 2019
+| Date         : Sat Sep 28 18:13:20 2019
 | Host         : HP running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 401
+             Violations found: 413
 +-----------+------------------+-----------------------------+------------+
 | Rule      | Severity         | Description                 | Violations |
 +-----------+------------------+-----------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell | 401        |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell | 413        |
 +-----------+------------------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -414,57 +414,57 @@ Related violations: <none>
 
 TIMING-17#77 Critical Warning
 Non-clocked sequential cell  
-The clock pin current_measurement_wrapper1/current_reg[0]/C is not reached by a timing clock
+The clock pin current_measurement_wrapper1/current_prev_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#78 Critical Warning
 Non-clocked sequential cell  
-The clock pin current_measurement_wrapper1/current_reg[10]/C is not reached by a timing clock
+The clock pin current_measurement_wrapper1/current_prev_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#79 Critical Warning
 Non-clocked sequential cell  
-The clock pin current_measurement_wrapper1/current_reg[1]/C is not reached by a timing clock
+The clock pin current_measurement_wrapper1/current_prev_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#80 Critical Warning
 Non-clocked sequential cell  
-The clock pin current_measurement_wrapper1/current_reg[2]/C is not reached by a timing clock
+The clock pin current_measurement_wrapper1/current_prev_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#81 Critical Warning
 Non-clocked sequential cell  
-The clock pin current_measurement_wrapper1/current_reg[3]/C is not reached by a timing clock
+The clock pin current_measurement_wrapper1/current_prev_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#82 Critical Warning
 Non-clocked sequential cell  
-The clock pin current_measurement_wrapper1/current_reg[4]/C is not reached by a timing clock
+The clock pin current_measurement_wrapper1/current_prev_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#83 Critical Warning
 Non-clocked sequential cell  
-The clock pin current_measurement_wrapper1/current_reg[5]/C is not reached by a timing clock
+The clock pin current_measurement_wrapper1/current_prev_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#84 Critical Warning
 Non-clocked sequential cell  
-The clock pin current_measurement_wrapper1/current_reg[6]/C is not reached by a timing clock
+The clock pin current_measurement_wrapper1/current_prev_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#85 Critical Warning
 Non-clocked sequential cell  
-The clock pin current_measurement_wrapper1/current_reg[7]/C is not reached by a timing clock
+The clock pin current_measurement_wrapper1/current_prev_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#86 Critical Warning
 Non-clocked sequential cell  
-The clock pin current_measurement_wrapper1/current_reg[8]/C is not reached by a timing clock
+The clock pin current_measurement_wrapper1/current_prev_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#87 Critical Warning
 Non-clocked sequential cell  
-The clock pin current_measurement_wrapper1/current_reg[9]/C is not reached by a timing clock
+The clock pin current_measurement_wrapper1/current_prev_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#88 Critical Warning
@@ -2029,10 +2029,70 @@ Related violations: <none>
 
 TIMING-17#400 Critical Warning
 Non-clocked sequential cell  
-The clock pin yellow_top_reg/C is not reached by a timing clock
+The clock pin volt_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#401 Critical Warning
+Non-clocked sequential cell  
+The clock pin volt_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#402 Critical Warning
+Non-clocked sequential cell  
+The clock pin volt_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#403 Critical Warning
+Non-clocked sequential cell  
+The clock pin volt_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#404 Critical Warning
+Non-clocked sequential cell  
+The clock pin volt_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#405 Critical Warning
+Non-clocked sequential cell  
+The clock pin volt_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#406 Critical Warning
+Non-clocked sequential cell  
+The clock pin volt_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#407 Critical Warning
+Non-clocked sequential cell  
+The clock pin volt_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#408 Critical Warning
+Non-clocked sequential cell  
+The clock pin volt_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#409 Critical Warning
+Non-clocked sequential cell  
+The clock pin volt_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#410 Critical Warning
+Non-clocked sequential cell  
+The clock pin volt_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#411 Critical Warning
+Non-clocked sequential cell  
+The clock pin xadc_pot/inst/DCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#412 Critical Warning
+Non-clocked sequential cell  
+The clock pin yellow_top_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#413 Critical Warning
 Non-clocked sequential cell  
 The clock pin yellow_top_reg_lopt_replica/C is not reached by a timing clock
 Related violations: <none>

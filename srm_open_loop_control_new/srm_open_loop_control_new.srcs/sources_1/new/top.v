@@ -3,7 +3,7 @@
 module top(
     input wire clk,
     
-    input wire sw_select_display,
+    input wire [2:0] sw_select_display,
     
     input wire hallR,
     input wire hallB,
@@ -32,6 +32,11 @@ module top(
     
     output wire UART_RXD_OUT,
     
+    input wire vauxn11,
+    input wire vauxp11,
+    input wire vp_in,
+    input wire vn_in,
+    
     output reg brown_top,
     output reg yellow_top,
     output reg black_top,
@@ -46,20 +51,32 @@ module top(
     output wire [7:0] anode
     );
     
-    wire [3:0] digit8;
-    wire [3:0] digit7;
-    wire [3:0] digit6;
-    wire [3:0] digit5;
+    reg [4:0] digit8;
+    reg [4:0] digit7;
+    reg [4:0] digit6;
+    reg [4:0] digit5;
     wire [3:0] digit4;
     wire [3:0] digit3;
     wire [3:0] digit2;
     wire [3:0] digit1;
-    wire [11:0] number;
+    reg [11:0] number;
     
-    assign digit8 = (sw_select_display) ? 13 : 10;
-    assign digit7 = (sw_select_display) ? 15 : 11;
-    assign digit6 = (sw_select_display) ? 14 : 12;
-    assign digit5 = (sw_select_display) ? 15 : 15;
+//    assign digit8 = (sw_select_display) ? 13 : 10;
+//    assign digit7 = (sw_select_display) ? 15 : 11;
+//    assign digit6 = (sw_select_display) ? 14 : 12;
+//    assign digit5 = (sw_select_display) ? 15 : 15;
+    
+    wire enable;
+    wire ready;
+    wire [15:0] data;
+    reg [11:0] volt;
+    xadc_wiz_0 xadc_pot (.daddr_in(7'h1b), .dclk_in(clk), .den_in(enable), .di_in(0), .dwe_in(0), .vauxn11(vauxn11), .vauxp11(vauxp11), .vn_in(vn_in), .vp_in(vp_in), .do_out(data), .eoc_out(enable), .drdy_out(ready));
+    always @ (posedge clk) begin
+        if (ready == 1'b1) begin
+            volt <= (data[15:4]*1000)/4095;
+        end
+    end
+    
     
     wire [11:0] current1;
     wire [11:0] current2;
@@ -74,7 +91,40 @@ module top(
     wire [11:0] freq;
     speed_measurement speed_measurement_instance (.clk(clk), .hallR(hallR), .freq(freq));
     
-    assign number = (sw_select_display) ? current1 : freq;
+//    assign number = (sw_select_display) ? current1 : freq;
+    
+    always @ (sw_select_display) begin
+        case(sw_select_display)
+            3'b001: begin
+                digit8 <= 10;
+                digit7 <= 11;
+                digit6 <= 12;
+                digit5 <= 15;
+                number <= freq;
+            end
+            3'b010: begin
+                digit8 <= 13;
+                digit7 <= 15;
+                digit6 <= 14;
+                digit5 <= 15;
+                number <= current1;
+            end
+            3'b100: begin
+                digit8 <= 10;
+                digit7 <= 16;
+                digit6 <= 17;
+                digit5 <= 15;
+                number <= volt;
+            end
+            default: begin
+                digit8 <= 15;
+                digit7 <= 15;
+                digit6 <= 15;
+                digit5 <= 15;
+                number <= 0;
+            end
+        endcase
+    end
     
     bcd bcd_wrapper (.number(number), .thousands(digit4), .hundreds(digit3), .tens(digit2), .ones(digit1));
     seven_segment_display seven_segment_display_wrapper (.clk(clk), .digit1(digit1), .digit2(digit2), .digit3(digit3), .digit4(digit4), .digit5(digit5), .digit6(digit6), .digit7(digit7), .digit8(digit8), .cathode(cathode), .anode(anode));

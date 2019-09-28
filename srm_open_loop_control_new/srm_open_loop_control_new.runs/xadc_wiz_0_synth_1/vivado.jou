@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Sep 28 17:23:49 2019
+# Process ID: 10980
+# Current directory: E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.runs/xadc_wiz_0_synth_1
+# Command line: vivado.exe -log xadc_wiz_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source xadc_wiz_0.tcl
+# Log file: E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.runs/xadc_wiz_0_synth_1/xadc_wiz_0.vds
+# Journal file: E:/FPGA/SRM_FPGA/srm_open_loop_control_new/srm_open_loop_control_new.runs/xadc_wiz_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source xadc_wiz_0.tcl -notrace

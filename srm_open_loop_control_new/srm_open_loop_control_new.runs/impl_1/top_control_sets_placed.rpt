@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Sep 25 21:27:33 2019
+| Date         : Sat Sep 28 18:12:26 2019
 | Host         : HP running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    91 |
-|    Minimum number of control sets                        |    91 |
+| Total control sets                                       |    92 |
+|    Minimum number of control sets                        |    92 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   503 |
+| Unused register locations in slices containing registers |   508 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,12 +39,12 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    91 |
+| Total control sets |    92 |
 | >= 0 to < 4        |    60 |
 | >= 4 to < 6        |    11 |
 | >= 6 to < 8        |     6 |
 | >= 8 to < 10       |     4 |
-| >= 10 to < 12      |     4 |
+| >= 10 to < 12      |     5 |
 | >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     0 |
 | >= 16              |     5 |
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              53 |           25 |
+| No           | No                    | No                     |              53 |           26 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |             135 |           37 |
-| Yes          | No                    | No                     |             107 |           29 |
+| Yes          | No                    | No                     |             118 |           36 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             106 |           69 |
+| Yes          | Yes                   | No                     |             106 |           67 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,97 +73,98 @@ Table of Contents
 +--------------------------------------------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+------------------+----------------+
 |                            Clock Signal                            |                        Enable Signal                        |                            Set/Reset Signal                           | Slice Load Count | Bel Load Count |
 +--------------------------------------------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+------------------+----------------+
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[2]                        | current_measurement_wrapper1/data0_1                                  |                1 |              1 |
-| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[11]                       | current_measurement_wrapper3/data0                                    |                1 |              1 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/CS_i_1__2_n_0                  |                                                                       |                1 |              1 |
-|  spi_dac_current/DAC_SCLK_OBUF                                     | spi_dac_current/FSM_sequential_state[1]_i_1_n_0             |                                                                       |                1 |              1 |
-|  spi_dac_current/DAC_SCLK_OBUF                                     | spi_dac_current/FSM_sequential_state_reg_n_0_[0]            |                                                                       |                1 |              1 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[7]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[8]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[11]                       | current_measurement_wrapper4/data0                                    |                1 |              1 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/CS_i_1_n_0                     |                                                                       |                1 |              1 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[10]                       | current_measurement_wrapper4/data0                                    |                1 |              1 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[3]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[11]                       | current_measurement_wrapper1/data0_1                                  |                1 |              1 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[10]                       | current_measurement_wrapper1/data0_1                                  |                1 |              1 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[3]                        | current_measurement_wrapper1/data0_1                                  |                1 |              1 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[12]                       | current_measurement_wrapper1/data0_1                                  |                1 |              1 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[1]                        | current_measurement_wrapper1/data0_1                                  |                1 |              1 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[5]                        | current_measurement_wrapper1/data0_1                                  |                1 |              1 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[8]                        | current_measurement_wrapper1/data0_1                                  |                1 |              1 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[6]                        | current_measurement_wrapper1/data0_1                                  |                1 |              1 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[9]                        | current_measurement_wrapper1/data0_1                                  |                1 |              1 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[7]                        | current_measurement_wrapper1/data0_1                                  |                1 |              1 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[4]                        | current_measurement_wrapper1/data0_1                                  |                1 |              1 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[1]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[2]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
-| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/CS_i_1__0_n_0                  |                                                                       |                1 |              1 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[5]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[6]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
-| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[10]                       | current_measurement_wrapper2/data0                                    |                1 |              1 |
-| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[1]                        | current_measurement_wrapper2/data0                                    |                1 |              1 |
-| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[6]                        | current_measurement_wrapper2/data0                                    |                1 |              1 |
-| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[7]                        | current_measurement_wrapper2/data0                                    |                1 |              1 |
-| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[9]                        | current_measurement_wrapper2/data0                                    |                1 |              1 |
-| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[3]                        | current_measurement_wrapper2/data0                                    |                1 |              1 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[9]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
-| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[11]                       | current_measurement_wrapper2/data0                                    |                1 |              1 |
 | ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[2]                        | current_measurement_wrapper2/data0                                    |                1 |              1 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[9]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
+| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/CS_i_1__0_n_0                  |                                                                       |                1 |              1 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[2]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[12]                       | current_measurement_wrapper4/data0                                    |                1 |              1 |
+| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[6]                        | current_measurement_wrapper2/data0                                    |                1 |              1 |
+| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[9]                        | current_measurement_wrapper2/data0                                    |                1 |              1 |
+| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[10]                       | current_measurement_wrapper2/data0                                    |                1 |              1 |
+| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[11]                       | current_measurement_wrapper2/data0                                    |                1 |              1 |
 | ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[4]                        | current_measurement_wrapper2/data0                                    |                1 |              1 |
 | ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[5]                        | current_measurement_wrapper2/data0                                    |                1 |              1 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[7]                        | current_measurement_wrapper1/data0                                    |                1 |              1 |
+| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[7]                        | current_measurement_wrapper2/data0                                    |                1 |              1 |
+| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[3]                        | current_measurement_wrapper2/data0                                    |                1 |              1 |
 | ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[8]                        | current_measurement_wrapper2/data0                                    |                1 |              1 |
 | ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[12]                       | current_measurement_wrapper2/data0                                    |                1 |              1 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[4]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[12]                       | current_measurement_wrapper4/data0                                    |                1 |              1 |
+| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/data[1]                        | current_measurement_wrapper2/data0                                    |                1 |              1 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[1]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/CS_i_1__2_n_0                  |                                                                       |                1 |              1 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[10]                       | current_measurement_wrapper4/data0                                    |                1 |              1 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[4]                        | current_measurement_wrapper1/data0                                    |                1 |              1 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[2]                        | current_measurement_wrapper1/data0                                    |                1 |              1 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[3]                        | current_measurement_wrapper1/data0                                    |                1 |              1 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[8]                        | current_measurement_wrapper1/data0                                    |                1 |              1 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[5]                        | current_measurement_wrapper1/data0                                    |                1 |              1 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[6]                        | current_measurement_wrapper1/data0                                    |                1 |              1 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[9]                        | current_measurement_wrapper1/data0                                    |                1 |              1 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[11]                       | current_measurement_wrapper1/data0                                    |                1 |              1 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[10]                       | current_measurement_wrapper1/data0                                    |                1 |              1 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[12]                       | current_measurement_wrapper1/data0                                    |                1 |              1 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/data[1]                        | current_measurement_wrapper1/data0                                    |                1 |              1 |
 | ~clk_IBUF_BUFG                                                     |                                                             |                                                                       |                1 |              1 |
-| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/CS_i_1__1_n_0                  |                                                                       |                1 |              1 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/CS_i_1_n_0                     |                                                                       |                1 |              1 |
+| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[4]                        | current_measurement_wrapper3/data0                                    |                1 |              1 |
+| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[11]                       | current_measurement_wrapper3/data0                                    |                1 |              1 |
 | ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[9]                        | current_measurement_wrapper3/data0                                    |                1 |              1 |
+| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[3]                        | current_measurement_wrapper3/data0                                    |                1 |              1 |
+| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[6]                        | current_measurement_wrapper3/data0                                    |                1 |              1 |
+| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/CS_i_1__1_n_0                  |                                                                       |                1 |              1 |
+| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[10]                       | current_measurement_wrapper3/data0                                    |                1 |              1 |
 | ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[1]                        | current_measurement_wrapper3/data0                                    |                1 |              1 |
 | ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[8]                        | current_measurement_wrapper3/data0                                    |                1 |              1 |
-| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[3]                        | current_measurement_wrapper3/data0                                    |                1 |              1 |
-| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[4]                        | current_measurement_wrapper3/data0                                    |                1 |              1 |
 | ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[2]                        | current_measurement_wrapper3/data0                                    |                1 |              1 |
-| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[6]                        | current_measurement_wrapper3/data0                                    |                1 |              1 |
-| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[12]                       | current_measurement_wrapper3/data0                                    |                1 |              1 |
-| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[10]                       | current_measurement_wrapper3/data0                                    |                1 |              1 |
 | ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[7]                        | current_measurement_wrapper3/data0                                    |                1 |              1 |
+| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[12]                       | current_measurement_wrapper3/data0                                    |                1 |              1 |
 | ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/data[5]                        | current_measurement_wrapper3/data0                                    |                1 |              1 |
-|  seven_segment_display_wrapper/refresh_clock_generator_wrapper/CLK |                                                             |                                                                       |                2 |              3 |
-| ~I_CLK_2_OBUF_BUFG                                                 |                                                             |                                                                       |                1 |              3 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[3]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[7]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[11]                       | current_measurement_wrapper4/data0                                    |                1 |              1 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[4]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[8]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[5]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/data[6]                        | current_measurement_wrapper4/data0                                    |                1 |              1 |
+|  spi_dac_current/DAC_SCLK_OBUF                                     | spi_dac_current/FSM_sequential_state[1]_i_1_n_0             |                                                                       |                1 |              1 |
+|  spi_dac_current/DAC_SCLK_OBUF                                     | spi_dac_current/FSM_sequential_state_reg_n_0_[0]            |                                                                       |                1 |              1 |
 | ~I_CLK_4_OBUF_BUFG                                                 |                                                             |                                                                       |                1 |              3 |
-| ~I_CLK_1_OBUF_BUFG                                                 |                                                             |                                                                       |                1 |              3 |
 | ~I_CLK_3_OBUF_BUFG                                                 |                                                             |                                                                       |                1 |              3 |
-| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/FSM_onehot_state[3]_i_1__1_n_0 |                                                                       |                1 |              4 |
-| ~clk_IBUF_BUFG                                                     | UART_tx_wrapper/UART_ready                                  | UART_tx_wrapper/msb_reg                                               |                1 |              4 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/FSM_onehot_state[3]_i_1_n_0    |                                                                       |                1 |              4 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/index                          | current_measurement_wrapper1/data0_1                                  |                2 |              4 |
-| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/index                          | current_measurement_wrapper3/data0                                    |                2 |              4 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/FSM_onehot_state[3]_i_1__2_n_0 |                                                                       |                1 |              4 |
-| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/index                          | current_measurement_wrapper4/data0                                    |                2 |              4 |
-| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/FSM_onehot_state[3]_i_1__0_n_0 |                                                                       |                2 |              4 |
+| ~I_CLK_2_OBUF_BUFG                                                 |                                                             |                                                                       |                2 |              3 |
+| ~I_CLK_1_OBUF_BUFG                                                 |                                                             |                                                                       |                1 |              3 |
+|  seven_segment_display_wrapper/refresh_clock_generator_wrapper/CLK |                                                             |                                                                       |                2 |              3 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/FSM_onehot_state[3]_i_1__2_n_0 |                                                                       |                2 |              4 |
+| ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/index                          | current_measurement_wrapper4/data0                                    |                1 |              4 |
+| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/FSM_onehot_state[3]_i_1__0_n_0 |                                                                       |                1 |              4 |
 | ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/index                          | current_measurement_wrapper2/data0                                    |                2 |              4 |
+| ~clk_IBUF_BUFG                                                     | UART_tx_wrapper/UART_ready                                  | UART_tx_wrapper/msb_reg                                               |                1 |              4 |
+| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/FSM_onehot_state[3]_i_1__1_n_0 |                                                                       |                1 |              4 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/FSM_onehot_state[3]_i_1_n_0    |                                                                       |                1 |              4 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/index                          | current_measurement_wrapper1/data0                                    |                2 |              4 |
+| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/index                          | current_measurement_wrapper3/data0                                    |                2 |              4 |
 |  clk_IBUF_BUFG                                                     | UART_tx_wrapper/bitIndex                                    | UART_tx_wrapper/UART_ready                                            |                2 |              5 |
-| ~clk_IBUF_BUFG                                                     | UART_tx_wrapper/UART_ready                                  |                                                                       |                2 |              5 |
-|  spi_dac_current/DAC_SCLK_OBUF                                     | spi_dac_current/index[5]_i_2_n_0                            | spi_dac_current/index0                                                |                3 |              6 |
-|  clk_IBUF_BUFG                                                     |                                                             | current_measurement_wrapper1/clkdiv[5]_i_1_n_0                        |                2 |              6 |
-|  clk_IBUF_BUFG                                                     |                                                             | current_measurement_wrapper2/clkdiv[5]_i_1__0_n_0                     |                2 |              6 |
-|  clk_IBUF_BUFG                                                     |                                                             | current_measurement_wrapper3/clkdiv[5]_i_1__1_n_0                     |                2 |              6 |
+| ~clk_IBUF_BUFG                                                     | UART_tx_wrapper/UART_ready                                  |                                                                       |                1 |              5 |
 |  clk_IBUF_BUFG                                                     |                                                             | current_measurement_wrapper4/clkdiv[5]_i_1__2_n_0                     |                2 |              6 |
+|  clk_IBUF_BUFG                                                     |                                                             | current_measurement_wrapper3/clkdiv[5]_i_1__1_n_0                     |                2 |              6 |
+|  clk_IBUF_BUFG                                                     |                                                             | current_measurement_wrapper2/clkdiv[5]_i_1__0_n_0                     |                2 |              6 |
+|  clk_IBUF_BUFG                                                     |                                                             | current_measurement_wrapper1/clkdiv[5]_i_1_n_0                        |                2 |              6 |
 |  clk_IBUF_BUFG                                                     |                                                             | spi_dac_current/clkdiv[5]_i_1__3_n_0                                  |                2 |              6 |
+|  spi_dac_current/DAC_SCLK_OBUF                                     | spi_dac_current/index[5]_i_2_n_0                            | spi_dac_current/index0                                                |                2 |              6 |
+| ~clk_IBUF_BUFG                                                     | UART_tx_wrapper/E[0]                                        |                                                                       |                2 |              8 |
 |  spi_dac_current/DAC_SCLK_OBUF                                     |                                                             |                                                                       |                2 |              8 |
-|  update_clock_generator_wrapper/div_clk_reg_0                      | brown_top_i_1_n_0                                           |                                                                       |                2 |              8 |
 |  clk_IBUF_BUFG                                                     | UART_tx_wrapper/txData                                      |                                                                       |                1 |              8 |
-| ~clk_IBUF_BUFG                                                     | UART_tx_wrapper/E[0]                                        |                                                                       |                1 |              8 |
-| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/current_prev_0                 |                                                                       |                3 |             11 |
-| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/current_prev                   |                                                                       |                2 |             11 |
-| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/current_prev                   |                                                                       |                2 |             11 |
+|  update_clock_generator_wrapper/update_clk                         | brown_top_i_1_n_0                                           |                                                                       |                3 |              8 |
+|  clk_IBUF_BUFG                                                     | xadc_pot/drdy_out                                           |                                                                       |                5 |             11 |
 | ~I_CLK_4_OBUF_BUFG                                                 | current_measurement_wrapper4/current_prev                   |                                                                       |                2 |             11 |
-|  clk_IBUF_BUFG                                                     | speed_measurement_instance/hall_count_0                     |                                                                       |                3 |             12 |
-|  clk_IBUF_BUFG                                                     | UART_tx_wrapper/timer_0                                     | UART_tx_wrapper/timer[26]_i_1_n_0                                     |                7 |             27 |
+| ~I_CLK_2_OBUF_BUFG                                                 | current_measurement_wrapper2/current_prev                   |                                                                       |                2 |             11 |
+| ~I_CLK_3_OBUF_BUFG                                                 | current_measurement_wrapper3/current_prev                   |                                                                       |                3 |             11 |
+| ~I_CLK_1_OBUF_BUFG                                                 | current_measurement_wrapper1/current_prev                   |                                                                       |                3 |             11 |
+|  clk_IBUF_BUFG                                                     | speed_measurement_instance/hall_count                       |                                                                       |                3 |             12 |
+|  clk_IBUF_BUFG                                                     | UART_tx_wrapper/timer                                       | UART_tx_wrapper/timer[26]_i_1_n_0                                     |                7 |             27 |
 |  clk_IBUF_BUFG                                                     |                                                             |                                                                       |               16 |             29 |
-|  clk_IBUF_BUFG                                                     |                                                             | update_clock_generator_wrapper/div_clk                                |                8 |             31 |
+|  clk_IBUF_BUFG                                                     |                                                             | update_clock_generator_wrapper/counter[31]_i_1_n_0                    |                8 |             31 |
 |  clk_IBUF_BUFG                                                     |                                                             | seven_segment_display_wrapper/refresh_clock_generator_wrapper/div_clk |                8 |             31 |
-|  clk_IBUF_BUFG                                                     |                                                             | speed_measurement_instance/hall_count_0                               |               11 |             43 |
+|  clk_IBUF_BUFG                                                     |                                                             | speed_measurement_instance/hall_count                                 |               11 |             43 |
 +--------------------------------------------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+------------------+----------------+
 
 
